@@ -5,8 +5,9 @@
       "type": "Feature",
       "properties": {
         "name": "Jalan Desa Nangalili",
-        "description": "Jaringan jalan utama di Desa Nangalili"
-
+        "description": "Jaringan jalan utama di Desa Nangalili",
+        "stroke": "#B00000",          
+        "stroke-width": 3            
       },
       "geometry": {
         "type": "LineString",
@@ -43,7 +44,9 @@
       "type": "Feature",
       "properties": {
         "name": "Jalan Kampung End",
-        "description": "Jalan yang menuju ke ujung kampung"
+        "description": "Jalan yang menuju ke ujung kampung",
+        "stroke": "#005E00",          
+        "stroke-width": 3
       },
       "geometry": {
         "type": "LineString",
@@ -61,7 +64,9 @@
       "type": "Feature",
       "properties": {
         "name": "Jalan Rohak",
-        "description": "Nama jalan rohak di Nangalili"
+        "description": "Nama jalan rohak di Nangalili",
+        "stroke": "#0000B0",          
+        "stroke-width": 3
       },
       "geometry": {
         "type": "LineString",

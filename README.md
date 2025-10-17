@@ -1,51 +1,34 @@
-# 🗺️ Peta Jaringan Jalan Desa Nangalili (Tugas Praktek GeoJSON)
+# Data GeoJSON Desa Nangalili
 
-Repositori ini berisi data jaringan jalan dan gang di **Desa Nangalili** (isi: [Ganti: Nama Kabupaten Anda]), disimpan dalam format **GeoJSON**.
+Ini adalah berkas README yang menjelaskan data geografis (GeoJSON) untuk Desa Nangalili.
 
-Data dibuat sebagai tugas praktek untuk mata kuliah/pelajaran [Ganti: Nama Mata Kuliah/Pelajaran] dan mengikuti standar pertukaran data geografis.
----
+## 1. Ikhtisar Data
 
-## 💾 Detail Data GeoJSON
+Berkas GeoJSON ini mendefinisikan jaringan jalan utama dan properti atribut untuk Desa Nangalili.
 
-**File Utama:** `village_road.geojson`
+| Informasi                 | Deskripsi                                                                 |
+|---------------------------|---------------------------------------------------------------------------|
+| **Format Berkas**         | GeoJSON (`.geojson`)                                                     |
+| **Sistem Referensi Koordinat (CRS)** | [Contoh: WGS 84 (EPSG: 4326)]                                        |
+| **Cakupan Geografis**     | Jaringan jalan utama di Desa Nangalili, Kabupaten Manggarai Barat, NTT   |
+| **Tujuan**                | Visualisasi, analisis spasial, dan pemetaan jaringan jalan desa          |
 
-| Deskripsi | Detail |
-| :--- | :--- |
-| **Tipe GeoJSON** | `FeatureCollection` |
-| **Tipe Geometri** | `LineString` (Merepresentasikan garis jalan/gang) |
-| **Jumlah Fitur** | **[Ganti: Tulis jumlah total jalan/gang yang Anda buat, idealnya 30]** |
-| **Sistem Koordinat** | $\text{WGS } 84$ ($\text{Longitude, Latitude}$) |
+## 2. Struktur Berkas
 
-### Struktur Properti (`properties`)
+Berkas utama data ini adalah:
 
-Setiap fitur jalan (`Feature`) memiliki atribut non-spasial di dalam objek $\text{JSON}$. Tambahkan atau sesuaikan properti bila diperlukan:
-| Kunci (Key) | Deskripsi | Contoh Nilai |
-| :--- | :--- | :--- |
-| `name` | Nama jalan atau gang. | "Jalan Utama Nangalili" |
-| `category` | Kategori atau tipe jalan (mis. "Jalan Desa"). | "Jalan Desa", "Jalan Penghubung" |
-| `length_m` | Panjang jalan (perkiraan) dalam meter. | 550 |
+| Nama Berkas              | Deskripsi                                                                 |
+|--------------------------|---------------------------------------------------------------------------|
+| `village_road.geojson`   | Berkas GeoJSON yang berisi geometri (garis) dan atribut data untuk jalan desa |
 
----
+## 3. Isi Data (Atribut)
 
-## ✨ Verifikasi dan Visualisasi Online (GeoJSON.io)
+Setiap fitur (garis) dalam berkas GeoJSON memiliki properti atribut yang memberikan informasi tambahan mengenai jaringan jalan tersebut.
 
+| Nama Atribut (Key) | Tipe Data | Deskripsi                              | Contoh Nilai                     |
+|--------------------|-----------|----------------------------------------|-----------------------------------|
+| `name`            | String    | Nama jalan                            | Jalan Desa Nangalili             |
+| `description`     | String    | Deskripsi jalan                       | Jaringan jalan utama di Desa Nangalili |
+| `category`        | String    | Kategori geometri                     | LineString                       |
 
-> Catatan: Jika Anda belum memastikan validitas file `village_road.geojson`, saya bisa melakukan pemeriksaan (lint/validasi) dan menghitung jumlah fitur.
-
-Data GeoJSON ini dapat dibuka secara interaktif di geojson.io untuk pemeriksaan cepat tanpa harus mengunduh file.
-
-**Tautan tampilan:**
-
-https://geojson.io/#data=https://raw.githubusercontent.com/FARAZIFTAN/geojson-my-village/refs/heads/main/village_road.geojson
-
-
----
-
-## 🚀 Langkah Akhir: Penyimpanan Basis Data MongoDB
-
-Data ini siap untuk disimpan ke basis data spasial, misalnya MongoDB.
-
-- Contoh: impor data ke basis data **MongoDB**.
-- Untuk kueri spasial yang efisien, buat index **2dsphere** pada field `"geometry"` di collection yang menyimpan fitur.
-
-
+[**Atribut Tambahan**] | [**Tipe Data**] | [**Deskripsi Atribut Tambahan**] | [**Nilai Contoh**]
